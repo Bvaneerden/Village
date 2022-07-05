@@ -7,7 +7,7 @@ function Medications({addMedication}) {
   const searchForMedications = async (e) => {
     e.preventDefault()
   
-    const results = await fetch(`http://localhost:3001/findmedications?name=${searchTerm}`).then(res => res.json())
+    const results = await fetch(`/findmedications?name=${searchTerm}`).then(res => res.json())
     setMedications(results)
   }
 

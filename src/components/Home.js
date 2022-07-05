@@ -5,6 +5,7 @@ function Home() {
       <h1>Welcome to the Village</h1>
       
       </header>
+      
 
     </div>
   )

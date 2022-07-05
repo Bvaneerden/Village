@@ -154,3 +154,17 @@ h1 {
 .individual-meds {
   border: black 1px solid;
 }
+
+fieldset {
+  padding: 0
+}
+
+.small{
+  display: inline;
+  width: 10%
+}
+
+.med {
+  display: inline;
+  width: 30%
+}

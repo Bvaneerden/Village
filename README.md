@@ -1,3 +1,16 @@
+It takes a Village to raise a child.
+
+This project was created to help bring awareness of the risks of accidental poisoning which can occur when pharmaceuticals are administered to frequently.
+
+This can occur as one guardian is unaware of anothers administertion of pharmaceuticals, or unaware of previous times or quantity over a time period.
+
+Please support your Village and keep your Village safe.
+
+kids safe information about poisoning
+https://kidsafe.com.au/wp-content/uploads/2019/03/Poisoning-Information-Sheet.pdf
+
+https://www.nps.org.au/news/new-data-act-as-a-reminder-about-accidental-poisoning-in-children
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

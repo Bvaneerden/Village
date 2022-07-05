@@ -5,8 +5,6 @@ import RenderChildren from './RenderChildren'
 
 function Main() {
   const [children, setChildren] = useState([])
-  const current = new Date();
-  const date = `${current}`
 
   function getChildren() {
     fetch('/children')
@@ -37,7 +35,7 @@ function Main() {
   const addMedication = (medication, childId) => {
     const selectedChild = children[childId]
     const otherChildren = children.filter(child => child !== selectedChild)
-    medication.instructions = `please click edit to enter instructions` 
+    medication.instructions = `` 
     medication.dosageQty = 1 + ' tablet'
     medication.dosageInterval = 4
     medication.dosageIntervalPeriod = 'hourly'
@@ -90,16 +88,11 @@ function Main() {
         ]
       }
     ])
-
-    console.log(medication.lastDose)
-
-
   }
 
   return (
     <div>
         <h1>Main Page</h1>
-
 
       < AddChild
       addChild={addChild}

@@ -77,23 +77,21 @@ function ChildsMedication({ medication, index, updateMedication, administerDoseB
 
   return (
     <div className='individual-meds'>
-    <p><strong>Medication:</strong> {medication.name}</p>
-    <img src={ medication._thumburl} alt="" />
-    <p><strong>Instructions:</strong> {medication.instructions}</p>
-    <p><strong>Dosage:</strong> {medication.dosageQty} {medication.dosageInterval} {medication.dosageIntervalPeriod}</p>
-    <p><strong>Last Dose:</strong> {medication.lastDose.toString()}</p>
+      <p><strong>Medication:</strong> {medication.name}</p>
+      <img src={ medication._thumburl} alt="" />
+      <p><strong>Instructions:</strong> {medication.instructions}</p>
+      <p><strong>Dosage:</strong> {medication.dosageQty} {medication.dosageInterval} {medication.dosageIntervalPeriod}</p>
+      <p><strong>Last Dose:</strong> {medication.lastDose.toString()}</p>
 
-    <button onClick={handleadministerDose}>Administer Dose</button>
-    <button onClick={handleEditMedication}>Edit Medication</button>
-    {editingMedication && (
-      <EditMedication
-      medication={medication}
-      editMedication={editMedication}
+      <button onClick={handleadministerDose}>Administer Dose</button>
+      <button onClick={handleEditMedication}>Edit Medication</button>
+      {editingMedication && (
+        <EditMedication
+        medication={medication}
+        editMedication={editMedication}
 
-      />
-    )}
-
-  </div>
+        />
+      )}
+    </div>
   )
-
   }

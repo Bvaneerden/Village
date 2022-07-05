@@ -8,7 +8,6 @@ function EditMedication({ medication, editMedication }) {
   const [dosageIntervalPeriod, setDosageIntervalPeriod] = useState(medication.dosageIntervalPeriod)
   const [lastDose, setLastDose] = useState(medication.lastDose)
 
-
   const handleNameChange = (e) => {
     setName(e.target.value)
   }
@@ -52,22 +51,39 @@ function EditMedication({ medication, editMedication }) {
   return (
     <section className='AddMedication'>
       <form onSubmit={handleSubmitMedication}>
-      <input type="text" placeholder="Medication name" value={name}  onChange={handleNameChange}/>
-      <input type="text" placeholder="Medication instructions" value={instructions} onChange={handleInstructionsChange}/>
+        <fieldset>
+          <label htmlFor="">Medication name: </label>
+          <input type="text" placeholder="Medication name" value={name}  onChange={handleNameChange}/>
+        </fieldset>
 
-      <input type="text" placeholder="Dosage amount" value={dosageQty} onChange={handleDosageQtyChange} />
-      <input type="number" min="0" placeholder="Dosage Interval" value={dosageInterval} onChange={handleDosageIntervalChange} />
+        <fieldset>
+          <label htmlFor="">Medication instructions: </label>
+          <input type="text" placeholder="Medication instructions" value={instructions} onChange={handleInstructionsChange}/>
+        </fieldset>
 
-      <select name="time" value={dosageIntervalPeriod} onChange={handleDosageIntervalPeriodChange}>
-        <option >--Please choose an option--</option>
-        <option value="times per day">times per day</option>
-        <option value="times per week">times per week</option>
-        <option value="hourly">hourly</option>
-      </select>
-      <label htmlFor="last dose taken"></label>
-      <input type="time" placeholder="Last dose taken" value={lastDose}  onChange={handleLastDoseChange} />
-      <button type="submit">Edit Medication</button>
-      <p>Medication History: {medication.doseHistory.join(', ')}</p>
+        <fieldset>
+          <label htmlFor="">Dosage Amount: </label>
+          <input type="text" placeholder="Dosage amount" value={dosageQty} onChange={handleDosageQtyChange} />
+        </fieldset>
+
+        <fieldset>
+          <label htmlFor="">Dosage Interval: </label>
+          <input className='small' type="number" min="0" placeholder="Dosage Interval" value={dosageInterval} onChange={handleDosageIntervalChange} />
+        <select className='med' name="time" value={dosageIntervalPeriod} onChange={handleDosageIntervalPeriodChange}>
+          <option >--Please choose an option--</option>
+          <option value="times per day">times per day</option>
+          <option value="times per week">times per week</option>
+          <option value="hourly">hourly</option>
+        </select>
+        </fieldset>
+
+        <fieldset>
+        <label htmlFor="last dose taken">Last dose administered: </label>
+        <input type="time" placeholder="Last dose taken" value={lastDose}  onChange={handleLastDoseChange} />
+        </fieldset>
+        
+        <button type="submit">Edit Medication</button>
+        <p>Medication History: {medication.doseHistory.join(', ')}</p>
 
       </form>
 
