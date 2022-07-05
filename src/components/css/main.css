@@ -1,0 +1,156 @@
+body {
+  /*background-image: linear-gradient(to bottom right, rgb(136, 215, 241), rgb(190, 45, 234));*/
+  background: linear-gradient(to bottom, rgb(197, 237, 251), rgb(185, 169, 255)) ;
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+.wrapper {
+  margin: 0 auto;  
+}
+
+.heading {
+  display: inline-flex;
+  width: 100%;
+}
+
+.title {
+  width: 80%;
+}
+
+.welcome {
+padding-bottom: 10px;
+}
+
+.topnav {
+  background-color: rgb(180, 246, 151);
+  overflow: hidden;
+}
+
+.topnav a {
+  display: flex-box;
+  /* float: left; */
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 4px 4px;
+  text-decoration: none;
+  font-size: 17px;
+  padding-top: 0;
+  margin-top: 0;
+  border-top: 0;
+}
+
+.topnav a:hover {
+  background-color: rgb(155, 248, 255);
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #37edab;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.navlist {
+  list-style-type: none;
+  /* float: left; */
+  /* padding: 8px; */
+  /* position: fixed; */
+  /* top: 30px; */
+  width: 80%;
+  display: inline-flex;
+  justify-content: space-around;
+  overflow-x:hidden;
+  margin: 0 auto;
+  
+}
+
+li {
+  display: 
+  
+}
+
+
+
+
+.main{
+  text-align: center;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.renderChildren {
+  border: black 1px solid;
+}
+
+.medication-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+img {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+.emergency {
+  background-color: white;
+  border: rgb(248, 5, 5) 10px solid;
+  padding: 0px;
+  align-self: end
+}
+
+.emergencyheading {
+  border: none;
+  margin: 0px;
+  text-align: center;
+}
+
+.emergencylist {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+  margin: 0;
+
+}
+
+h1 { 
+  margin-bottom: 0;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.all_resources {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.all_lang {
+  align-self: end;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  gap: 1em;
+  margin: 0 auto;
+}
+
+
+
+.medication-list {
+  border: black 1px solid;
+}
+
+.individual-meds {
+  border: black 1px solid;
+}
